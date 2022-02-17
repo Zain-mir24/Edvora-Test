@@ -14,7 +14,7 @@ function Body() {
       </span>
       {Nearestpath().map((i) => {
         
-        return <Card Rideid={i.object.id} state={i.object.state} city={i.object.city} path={i.object.station_path} origin={i.object.origin_station_code} distance={i.distance} />;
+        return <Card Rideid={i.object.id} date={i.object.date} state={i.object.state} city={i.object.city} path={i.object.station_path} origin={i.object.origin_station_code} distance={i.distance} />;
       })}
     </div>
   );
