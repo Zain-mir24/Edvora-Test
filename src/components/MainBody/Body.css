@@ -1,0 +1,22 @@
+.mainBackground {
+  background: #292929;
+  height: 768px;
+  text-align: left;
+}
+
+/* Span elements */
+.spanElement {
+    color: #D0CBCB;
+  padding: 15px;
+  margin: 20px;    
+  /* top: 25px;     */
+  font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 22px;
+}
+.spanElement:hover{
+    text-decoration: underline;
+    color:#ffffff;
+}
