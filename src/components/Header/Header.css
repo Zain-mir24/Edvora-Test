@@ -22,8 +22,8 @@
 }
 .rightHeading {
     text-align: right;
+    margin-top: 20.28px;
   
-  top: 30px;
 
   font-family: Inter;
   font-style: normal;
@@ -34,5 +34,8 @@
   color: #ffffff;
 }
 .rectangle{
-
+    width: 50px;
+    height: 50px;
+        border-radius: 50%;
+transform: rotate(-0.36deg);
 }
