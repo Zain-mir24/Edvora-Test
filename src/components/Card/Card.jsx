@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 function Card(props) {
+  console.log(props.city,"city")
  var newArray=[]
  props.path.map((i)=>{
    newArray.push(i,",")
@@ -17,8 +18,8 @@ function Card(props) {
         Date : 15th Feb 2022 16:33 <br />
         Distance:{props.distance}
         <div style={{ textAlign: "right",position:"absolute",top:"10px",right:"10px" }}>
-          <span className="spanText">city name</span>
-          <span className="spanText">State Name</span>
+          <span className="spanText">{props.state}</span>
+          <span className="spanText">{props.city}</span>
         </div>
       </div>
     </div>
