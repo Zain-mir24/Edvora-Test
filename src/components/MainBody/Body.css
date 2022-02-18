@@ -6,9 +6,11 @@
 
 /* Span elements */
 .spanElement {
+  display: flex;
+
     color: #D0CBCB;
   padding: 15px;
-  margin: 20px;    
+  
   /* top: 25px;     */
   font-family: Inter;
 font-style: normal;

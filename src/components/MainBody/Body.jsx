@@ -5,34 +5,38 @@ import { Nearestpath } from "../../utils/data";
 import { Past } from "../../utils/past";
 import { UpComing } from "../../utils/future";
 function Body() {
+  var emptybool = Boolean;
+  UpComing().length == 0 ? (emptybool = true) : (emptybool = false);
   const [content, setContent] = useState("");
   return (
     <div className="mainBackground">
-      <span
-        className="spanElement"
+      <div className="row">
+      <div
+        className="col-lg-3 spanElement"
         onClick={() => {
           setContent("NearestPath");
         }}
       >
         Nearest Rides
-      </span>{" "}
-      <span
-        className="spanElement"
+      </div>{" "}
+      <div
+        className=" col-lg-3  spanElement"
         onClick={() => {
           setContent("UpcomingRides");
         }}
       >
         Upcoming Rides
-      </span>{" "}
-      <span
-        className="spanElement"
+      </div>{" "}
+      <div
+        className=" col-lg-3 spanElement"
         onClick={() => {
           setContent("PastRides");
         }}
       >
         Past rides Rides
-      </span>
-      <span className="spanElement">filters</span>
+      </div>
+      
+      </div>
       <div>
         {content == "NearestPath" &&
           Nearestpath().map((i) => {
@@ -49,14 +53,13 @@ function Body() {
             );
           })}
         {content == "UpcomingRides" &&
-          UpComing().map((i) => {
-            return UpComing.length == 0 ? (
+          emptybool ? (
             <div>
-   <h1 style={{color:"white"}}>
-     No rides in upcoming dates
-   </h1>
-              </div>
-            ) : (
+              <h1 style={{color:"white"}}>No rides</h1>
+            </div>
+          ) : (
+            UpComing().map((i) => {
+           
               <Card
                 Rideid={i.id}
                 date={i.date}
@@ -66,8 +69,13 @@ function Body() {
                 origin={i.origin_station_code}
                 distance={i.distance}
               />
-            );
-          })}
+            
+          })
+          )
+
+         
+        }
+
         {content == "PastRides" &&
           Past().map((i) => {
             return (
