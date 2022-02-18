@@ -7,7 +7,7 @@ import { UpComing } from "../../utils/future";
 function Body() {
   var emptybool = Boolean;
   UpComing().length == 0 ? (emptybool = true) : (emptybool = false);
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState("NearestPath");
   return (
     <div className="mainBackground">
       <div className="row">
