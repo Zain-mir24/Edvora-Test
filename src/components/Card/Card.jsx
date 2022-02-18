@@ -1,9 +1,7 @@
 import React from "react";
 import "./Card.css";
 function Card(props) {
-  console.log(props.date, "city");
-  var date1 = new Date(props.date).toString()
-  console.log(date1);
+  var date1 = new Date(props.date).toString();
   var newArray = [];
   props.path.map((i) => {
     newArray.push(i, ",");

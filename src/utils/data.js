@@ -42,12 +42,13 @@ export function Nearestpath() {
       return a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
     };
   }
-  for (let i = 0; i < 3; i++) {
-    
+  
+  for (let i = 0; i < 3; i++) {    
     finalArray = [];
     for (let j = 0; j < 9; j++) {
       var my = rides[i].station_path[j];
       finalArray.push(my);    }
+      // Object that will be sent to the frontend
     var newObject = {
       shortestValue: Number,
       object: {},
