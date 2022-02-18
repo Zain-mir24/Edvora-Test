@@ -6,6 +6,7 @@ import { Past } from "../../utils/past";
 import { UpComing } from "../../utils/future";
 function Body() {
   var emptybool = Boolean;
+  // checking if the incoming array is empty or not
   UpComing().length == 0 ? (emptybool = true) : (emptybool = false);
   const [content, setContent] = useState("NearestPath");
   return (
